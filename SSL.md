@@ -15,3 +15,19 @@ sudo apt install apache2
 | Route53 | DNS |
 | Elastic IP | Static IP |
 | Apache | Web Server |
+
+
+> [!NOTE]
+> WordPress redirects to HTTPS based on Site URL.
+
+> [!TIP]
+> Test using the Elastic IP before changing Route53.
+
+> [!IMPORTANT]
+> Verify which database WordPress actually uses before creating a backup.
+
+> [!WARNING]
+> Keep the old server until the new server is fully validated.
+
+> [!CAUTION]
+> Changing DNS before testing may increase downtime.
