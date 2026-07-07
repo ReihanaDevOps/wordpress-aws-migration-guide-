@@ -3,6 +3,17 @@
 <h1>
 Quection:- My instance had only the Private IP dont have Public IP so how can I ssh to my server now?
 </h1>
+
+Your PC
+     │
+     │ SSH
+     ▼
+Prometheus Server (Public IP)
+     │
+     │ SSH
+     ▼
+WordPress Server (Private IP only)
+
 <h4>
 Answer :- 
 I have log in to the server which have public IP and and ssh to that server which in same VPC and ssh from that server to my wordpress server to get the backup using wordpres's server Private IP.
@@ -112,3 +123,47 @@ sudo find /var/www/html -type f -exec chmod 644 {} \;
 sudo systemctl restart apache2
 sudo systemctl restart mariadb
 ```
+
+Run these commands and share the output:
+```bash
+apache2 -v
+
+ls -ltrh
+```
+If that fails:
+```bash
+nginx -v
+```
+And:
+```bash
+mysql --version
+```
+Step 1: Update the server
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+Step 2: Install Apache
+sudo apt install apache2 -y
+
+Enable it:
+
+sudo systemctl enable apache2
+sudo systemctl start apache2
+Step 3: Install PHP and required extensions
+sudo apt install php php-cli php-common php-mysql php-curl php-gd php-mbstring php-xml php-zip php-intl php-bcmath php-soap php-imagick libapache2-mod-php -y
+
+Check the version:
+
+php -v
+Step 4: Install MariaDB
+sudo apt install mariadb-server mariadb-client -y
+
+Start and enable it:
+
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
+
+Verify:
+
+sudo systemctl status mariadb
