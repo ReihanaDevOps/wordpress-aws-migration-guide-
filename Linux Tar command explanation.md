@@ -1,4 +1,5 @@
-</h1>You actually ran:</h1>
+<h1>You actually ran:</h1>
+
 ```bash
 sudo tar -xzvf /home/ubuntu/wordpress-files.tar.gz -C /
 ```
