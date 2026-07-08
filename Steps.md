@@ -166,7 +166,7 @@ sudo find /var/www/html -type d -exec chmod 755 {} \;
 sudo find /var/www/html -type f -exec chmod 644 {} \;
 ```
 
-10. Restart services
+Step 6. Restart services
 ```bash
 sudo systemctl restart apache2
 sudo systemctl restart mariadb
