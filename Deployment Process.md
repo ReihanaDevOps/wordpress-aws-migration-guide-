@@ -7,10 +7,10 @@
                         ▼
                 payswift.ae
                         │
-                Route53 DNS
+                Route53 DNS (EIP assign)
                         │
                         ▼
-               Elastic IP (Old)
+               Elastic IP (New)
                         │
                         ▼
                   EC2 Instance
