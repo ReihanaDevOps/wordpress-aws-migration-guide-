@@ -28,3 +28,17 @@ When prompted:
 Enter your email.
 Agree to the terms.
 Choose the option to redirect HTTP to HTTPS
+
+My recommendation
+
+Unless you specifically need www, simply run:
+```bash
+sudo certbot --apache -d pay.ae
+```
+That will install HTTPS for the main domain and is the quickest way to get the site online.
+
+After it finishes, run:
+```bash
+sudo ss -tulpn | grep ':443'
+```
+You should then see Apache listening on port 443, and https://pay.ae should load correctly.
