@@ -132,7 +132,7 @@ Important: If your original wp-config.php has a different database password, use
 
 Step 2: Import the database
 ```bash
-mysql -u pay_site -p pay_site < /home/ubuntu/payswi_site.sql
+mysql -u pay_site -p pay_site < /home/ubuntu/pay_site.sql
 ```
 Enter the password you created in the previous step.
 
@@ -155,7 +155,8 @@ sudo rm -rf /var/www/html/*
 
 Extract your backup:
 ```bash
-sudo tar -xzvf /home/ubuntu/wordpress-files.tar.gz -C /
+ [!IMPORTANT]
+sudo tar -xzvf /home/ubuntu/wordpress-files.tar.gz -C /.
 ```
 Step 5. Fix file permissions
 
@@ -169,25 +170,5 @@ sudo find /var/www/html -type f -exec chmod 644 {} \;
 ```bash
 sudo systemctl restart apache2
 sudo systemctl restart mariadb
-```
-
-Run these commands and share the output:
-```bash
-apache2 -v
-
-ls -ltrh
-```
-If that fails:
-```bash
-nginx -v
-```
-And:
-```bash
-mysql --version
-```
-Step 1: Update the server
-```bash
-sudo apt update
-sudo apt upgrade -y
 ```
 
