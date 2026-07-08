@@ -24,14 +24,14 @@ The SSL certificate was installed inside that EC2 instance.
 The certificate files were stored on disk.
 
 Example:
-
+```bash
 /etc/letsencrypt/live/pay.ae/
-
+```
 contains
-
+```bash
 fullchain.pem
 privkey.pem
 cert.pem
 chain.pem
-
+```
 Those files belong to that server, not to the domain.
