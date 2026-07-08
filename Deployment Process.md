@@ -5,17 +5,17 @@
                     Internet
                         │
                         ▼
-                payswift.ae
+                     pays.ae
                         │
                 Route53 DNS (EIP assign)
                         │
                         ▼
-               Elastic IP (New)
+                Elastic IP (New)
                         │
                         ▼
                   EC2 Instance
                         │
-              Apache + WordPress
+               Apache + WordPress
                         │
           Let's Encrypt SSL Certificate
 ```
@@ -25,7 +25,7 @@ The certificate files were stored on disk.
 
 Example:
 
-/etc/letsencrypt/live/payswift.ae/
+/etc/letsencrypt/live/pay.ae/
 
 contains
 
