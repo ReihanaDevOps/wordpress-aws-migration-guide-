@@ -35,3 +35,26 @@ cert.pem
 chain.pem
 ```
 Those files belong to that server, not to the domain.
+```bash
+                Route53
+                    │
+                    ▼
+             Elastic IP
+                    │
+                    ▼
+          Ubuntu EC2 Instance
+                    │
+        ┌─────────────────────┐
+        │      Apache         │
+        │ 80        443       │
+        └─────────────────────┘
+            │            │
+            │            ▼
+            │     Let's Encrypt
+            │     SSL Certificate
+            ▼
+         WordPress
+            │
+            ▼
+         MariaDB
+```
